@@ -1,0 +1,37 @@
+{
+  "name": "nodesqladmin",
+  "version": "1.0.1",
+  "description": "MySQL/MariaDB process and variables control web-based",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarkMaper/nodesqladmin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.16.1",
+    "method-override": "^3.0.0",
+    "mysql": "^2.17.1",
+    "mysql-import": "^2.0.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "bugs": {
+    "url": "https://github.com/DarkMaper/nodesqladmin/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/my_package"
+}

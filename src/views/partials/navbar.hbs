@@ -1,0 +1,85 @@
+{{#if user}}
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">NodeSQLAdmin</a>
+    <!--input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"-->
+    <ul class="navbar-nav px-3 justify-content-end">
+        <li class="nav-item">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#userModal">
+                {{user.username}}
+            </button>
+        </li>
+    </ul>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userModalTitle">{{user.username}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="/auth/changePassword?_method=PUT" method="POST">
+          <div class="form-group">
+              <input type="password" name="oldpassword" placeholder="Contraseña actual" class="form-control">
+          </div>
+          <div class="form-group">
+              <input type="password" name="password" placeholder="Nueva contraseña" class="form-control">
+          </div>
+          <div class="form-group">
+              <input type="password" name="password2" placeholder="Repetir contraseña" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-secondary">Cambiar contraseña</a>
+          </form>
+
+        
+      </div>
+      <div class="modal-footer">
+        <a href="/auth/logout" class="btn btn-secondary">Cerrar sesión</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <span data-feather="home"></span>
+                            Resumen
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/processlist">
+                            <span data-feather="database"></span>
+                            Lista de procesos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/variables">
+                            <span data-feather="hash"></span>
+                            Variables
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/users">
+                            <span data-feather="users"></span>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logs">
+                            <span data-feather="file"></span>
+                            Registro
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {{/if}}

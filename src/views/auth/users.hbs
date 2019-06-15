@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row ml-1 mb-1">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#CreateUser">Añadir usuario</button>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div id="users"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="CreateUser" tabindex="-1" role="dialog" aria-labelledby="CreateUserCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CreateUserCenterTitle">Añadir usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/auth/users" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="Username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select name="role" class="form-control">
+                                <option value="BASICO">Básico</option>
+                                <option value="MODERADOR">Moderador</option>
+                                <option value="ADMINISTRADOR">Administrador</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Añadir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="/js/fancy/users-fancy.js"></script>
