@@ -48,3 +48,7 @@ Or you can use containers with Docker:
 $ docker run -p 8080:8080 -e PORT=8080 -e HOSTDB="host/ip" -e USERDB="username" -e PASSDB="pass db" -e DBNAME="database name" -d luorozco/nodesqladmin
 ```
 
+## Install databases
+
+In two options, for install the tables on database is simple. Go to ip_host:8080/install and follow the instructions.
+
