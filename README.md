@@ -45,6 +45,6 @@ Then app runs.
 Or you can use containers with Docker:
 
 ```bash
-$ docker run -p 8080:8080 -e PORT=8080 -e HOSTDB="host/ip" -e USERDB="username" -e PASSDB="pass db" -e DBNAME="database name" -d darkmaper/nodesqladmin
+$ docker run -p 8080:8080 -e PORT=8080 -e HOSTDB="host/ip" -e USERDB="username" -e PASSDB="pass db" -e DBNAME="database name" -d luorozco/nodesqladmin
 ```
 
